@@ -1,0 +1,33 @@
+description,category
+grocery shopping at supermarket,Food
+restaurant dinner with friends,Food
+coffee and breakfast,Food
+food delivery order,Food
+metro card recharge,Transport
+uber taxi ride,Transport
+petrol for car,Transport
+bus ticket,Transport
+new shoes from mall,Shopping
+online clothes order,Shopping
+mobile phone purchase,Shopping
+gift shopping,Shopping
+electricity bill payment,Bills
+internet broadband bill,Bills
+water bill payment,Bills
+monthly rent payment,Bills
+movie theatre tickets,Entertainment
+music streaming subscription,Entertainment
+video game purchase,Entertainment
+concert ticket,Entertainment
+doctor consultation,Health
+pharmacy medicine purchase,Health
+gym membership,Health
+health checkup,Health
+course fee payment,Education
+textbook purchase,Education
+online class subscription,Education
+school tuition fee,Education
+cash withdrawal,Other
+charity donation,Other
+bank service charge,Other
+miscellaneous expense,Other

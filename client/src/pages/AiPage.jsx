@@ -1,0 +1,11 @@
+import { useEffect, useState } from 'react'
+import { useAuth } from '../context/AuthContext'
+import { apiRequest } from '../services/api'
+
+export default function AiPage() {
+  const { session } = useAuth(); const headers = { Authorization: `Bearer ${session.token}` }
+  const [forecast, setForecast] = useState(null); const [insights, setInsights] = useState([]); const [message, setMessage] = useState(''); const [answer, setAnswer] = useState('')
+  useEffect(() => { Promise.all([apiRequest('/ml/forecast', { headers }), apiRequest('/insights', { headers })]).then(([nextForecast, nextInsights]) => { setForecast(nextForecast); setInsights(nextInsights.insights) }) }, [])
+  async function ask(event) { event.preventDefault(); const data = await apiRequest('/chat', { method: 'POST', headers, body: JSON.stringify({ message }) }); setAnswer(data.answer) }
+  return <div className="mx-auto max-w-4xl space-y-6"><header><p className="text-sm text-violet-400">AI assistant</p><h1 className="text-3xl font-bold">Forecasts and insights</h1></header><section className="rounded-xl border border-slate-800 bg-slate-900 p-5"><h2 className="font-semibold">Next-month spending estimate</h2><p className="mt-2 text-slate-300">{forecast?.status === 'ok' ? `₹${forecast.estimate} — ${forecast.message}` : forecast?.message || 'Loading…'}</p></section><section className="rounded-xl border border-slate-800 bg-slate-900 p-5"><h2 className="font-semibold">Insights</h2>{insights.length ? insights.map((item) => <p className="mt-3 text-sm text-slate-300" key={item.title}><span className="font-medium text-violet-300">{item.title}: </span>{item.message}</p>) : <p className="mt-2 text-slate-400">No insights yet. Add transactions to see them.</p>}</section><form className="rounded-xl border border-slate-800 bg-slate-900 p-5" onSubmit={ask}><h2 className="font-semibold">Ask about your finances</h2><div className="mt-3 flex gap-3"><input className="flex-1 rounded-lg border border-slate-700 bg-slate-950 p-2" value={message} onChange={(event) => setMessage(event.target.value)} placeholder="How much did I spend this month?" required /><button className="rounded-lg bg-violet-600 px-4">Ask</button></div>{answer && <p className="mt-3 text-slate-300">{answer}</p>}</form></div>
+}

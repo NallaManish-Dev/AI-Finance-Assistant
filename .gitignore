@@ -1,0 +1,45 @@
+# Frontend
+client/node_modules/
+client/dist/
+client/.env
+
+# Python
+server/.venv/
+server/__pycache__/
+server/.pytest_cache/
+server/**/__pycache__/
+*.py[cod]
+
+# Environment and editor files
+server/.env
+server/ml/models/*.joblib
+.vscode/
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Python virtual environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+.vscode/
+
+# Node modules (if applicable)
+node_modules/
+
+# System files
+.DS_Store
+Thumbs.db
+
+docs/
+AGENTS.md/
+README.md/
+
+
