@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AI Finance Assistant
 
 A personal finance application built with React, Flask, MongoDB, and beginner-friendly machine learning.
@@ -77,3 +78,7 @@ Follow `AGENTS.md` and build features in the order in `docs/08_DEVELOPMENT_STEPS
 
 ## Scope
 This is an educational project. It does not connect to banks, transfer money, or provide professional financial advice.
+=======
+# AI-Finance-Assistant
+An AI-powered personal finance management application
+>>>>>>> c505ddf639786d86c5a884d4907576d8aae34488
