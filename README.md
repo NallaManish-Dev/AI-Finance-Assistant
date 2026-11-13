@@ -7,12 +7,12 @@ A personal finance application built with React, Flask, MongoDB, and beginner-fr
 - Node.js and npm
 - Python
 - MongoDB Atlas account
-- VS Code and Codex
+- VS Code 
 
 ## Project folders
 - `client/` — React frontend
 - `server/` — Flask backend and ML code
-- `docs/` — project documentation
+
 
 ## Frontend setup
 ```bash
@@ -73,12 +73,10 @@ VITE_API_BASE_URL=http://localhost:5000/api/v1
 
 Never commit `.env` files.
 
-## Development
-Follow `AGENTS.md` and build features in the order in `docs/08_DEVELOPMENT_STEPS.md`.
 
 ## Scope
 This is an educational project. It does not connect to banks, transfer money, or provide professional financial advice.
 =======
 # AI-Finance-Assistant
 An AI-powered personal finance management application
->>>>>>> c505ddf639786d86c5a884d4907576d8aae34488
+
